@@ -142,7 +142,7 @@ System.register(["lodash", "moment", "./external/jsonpath.js"], function (_expor
                             } else {
                                 if (target.selectedDatastreamId == 0) return thisTargetResult;
                                 var _timeFilter2 = _this.getTimeFilter(options, "phenomenonTime");
-                                suburl = '/Datastreams(' + _this.getFormatedId(target.selectedDatastreamId) + ')/Observations?' + ("$filter=" + _timeFilter2 + "&$select=phenomenonTime,result");
+                                suburl = '/Datastreams(' + _this.getFormatedId(target.selectedDatastreamId) + ')/Observations?' + ("$filter=" + _timeFilter2 + "&$select=phenomenonTime,result&$orderby=phenomenonTime desc");
                             }
 
                             var transformedResults = [];
